@@ -29,6 +29,9 @@ namespace Janela
             {
                 
                 this.WindowState = FormWindowState.Normal;
+                Minimizar.Location = new Point(653, 12);
+                Maximizar.Location = new Point(704, 12);
+                Fechar.Location = new Point(755, 12);
             }
             else
             {
@@ -84,5 +87,10 @@ namespace Janela
         private extern static void ReleaseCapture();
         [DllImport("user32.DLL",EntryPoint = "SendMessage")]
         private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
